@@ -105,13 +105,14 @@ nav ul li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgb(185, 184, 184);
 }
 
 #trendingTitle,
 #trendingArticles {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
 }
 
 #trendingArticles {
@@ -127,7 +128,7 @@ nav ul li {
 }
 
 .trendingNum p {
-  margin: 10px;
+  margin: 0 20px;
   font-size: 1.8em;
   font-weight: 800;
   color: rgb(199, 199, 199);
@@ -146,10 +147,64 @@ nav ul li {
 
 .writer p {
   font-size: 0.7em;
+  font-weight: 800;
+  margin-left: 10px;
+}
+.writer p span {
+  font-weight: 500;
 }
 
 .published {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(113, 113, 113);
+}
+
+#mainPage {
+  display: flex;
+  width: 80%;
+}
+
+#mainArticles {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.mainArticle {
+  display: flex;
+  justify-content: space-between;
+}
+.mainArticleImg img {
+  width: 200px;
+  padding: 50px 20px;
+}
+
+aside {
+  width: 20%;
+}
+
+.writerMain {
+  display: flex;
+  align-items: center;
+}
+
+.writerMain p {
+  font-weight: 600;
+}
+
+.writerMain img {
+  margin-right: 10px;
+  border-radius: 50px;
+  width: 5%;
+  height: 5%;
+}
+
+.mainArticleDescr {
+  width: 80%;
+}
+
+.info {
+  display: flex;
   align-items: center;
 }
