@@ -12,8 +12,12 @@ body {
 #headerDiv {
   display: flex;
   justify-content: center;
-  background-color: #ffc017;
   height: 7vh;
+  position: sticky;
+  top: 0;
+  background-color: #ffc017;
+  z-index: 1;
+  border-bottom: 1px solid black;
 }
 
 header {
@@ -22,9 +26,15 @@ header {
   justify-content: space-between;
   align-items: center;
   margin: 0 20%;
-  position: fixed;
-  top: -7px;
-  background-color: #ffc017;
+}
+#headerDiv.scrolled {
+  color: black;
+  background-color: white;
+}
+.navBtn.scrolled {
+  background-color: black;
+  color: white;
+  border-radius: 50px;
 }
 
 nav ul {
@@ -42,13 +52,17 @@ nav ul li {
   background-color: #ffc017;
 }
 
-#getStartedBtn,
+.getStartedBtn,
 #titleBtn button {
   background-color: black;
   color: white;
   border-radius: 50px;
   width: 10vw;
   height: 4vh;
+}
+header.scrolledStarted {
+  background-color: white;
+  color: black;
 }
 
 #hero {
@@ -57,7 +71,6 @@ nav ul li {
   height: 40vh;
   background-color: #ffc017;
   padding-left: 20%;
-  border-top: 2px solid black;
   border-bottom: 1px solid black;
 }
 
@@ -138,6 +151,12 @@ nav ul li {
   color: rgb(199, 199, 199);
 }
 
+.trendingDescr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .writer {
   display: flex;
   align-items: center;
@@ -145,7 +164,6 @@ nav ul li {
 
 .writer img {
   width: 10%;
-  height: 10%;
   border-radius: 50%;
 }
 
@@ -154,8 +172,19 @@ nav ul li {
   font-weight: 800;
   margin-left: 10px;
 }
+
 .writer p span {
   font-weight: 500;
+}
+
+.articleTitle {
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.articleTitle h4 {
+  font-size: 0.8em;
 }
 
 .published {
@@ -184,10 +213,6 @@ nav ul li {
   padding: 50px 20px;
 }
 
-aside {
-  width: 20%;
-}
-
 .writerMain {
   display: flex;
   align-items: center;
@@ -211,4 +236,8 @@ aside {
 .info {
   display: flex;
   align-items: center;
+}
+
+aside {
+  width: 20%;
 }
